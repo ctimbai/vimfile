@@ -90,12 +90,12 @@ func SetTitle()
 		call append(line(".")+4, "")
 	endif
 	if expand("%:e") == 'cpp'
-		call append(line(".")+5, "#include<iostream>")
+		call append(line(".")+5, "#include <iostream>")
 		call append(line(".")+6, "using namespace std;")
 		call append(line(".")+7, "")
 	endif
 	if expand("%:e") == 'c'
-		call append(line(".")+5, "#include<stdio.h>")
+		call append(line(".")+5, "#include <stdio.h>")
 		call append(line(".")+6, "")
 	endif
 	if expand("%:e") == 'h'
@@ -111,7 +111,8 @@ autocmd BufNewFile * normal G
 
 " 定义快捷键的前缀，即<Leader>
 "let mapleader="\<space>"
-let mapleader="'"
+"let mapleader="'"
+let mapleader=";"
 
 " 设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
