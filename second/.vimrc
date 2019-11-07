@@ -84,7 +84,7 @@ func SetTitle()
 	else 
 		call setline(1, "/******************************************************************************") 
 		call append(line("."), " *	File Name: ".expand("%")) 
-		call append(line(".")+1, " *	Author: 公众号: CloudDeveloper") 
+		call append(line(".")+1, " *	Author: by, 公众号: Linux云计算网络") 
 		call append(line(".")+2, " *	Created Time: ".strftime("%c")) 
 		call append(line(".")+3, " *****************************************************************************/") 
 		call append(line(".")+4, "")
