@@ -2,7 +2,7 @@ vimrc 配置文件参考 `.vimrc`，具体的意思直接看文件中的注释�
 
 最终配置好的效果如下图：
 
-![](images/govim.png)
+![](/images/govim.png)
 
 
 
@@ -110,7 +110,7 @@ export GOPROXY=https://goproxy.io
 
 幸运的是，在 `github` 上有 `golang.org` 所有包的同名镜像 `mirror`，在 `github` 上 `golang` 的[项目主页](https://github.com/golang) 上可以看到，搜索`mirror`关键字即可查看所有的镜像包：
 
-![](images/gomirror.png)
+![](/images/gomirror.png)
 
 所以要做的就是，缺什么包，就到上面下载什么包进行手动安装即可。
 
