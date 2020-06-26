@@ -1,3 +1,4 @@
+
 "==============================================================================
 " vim 内置配置 
 "==============================================================================
@@ -81,6 +82,7 @@ Plug 'Valloric/YouCompleteMe'
 " 可以在文档中显示 git 信息
 Plug 'airblade/vim-gitgutter'
 
+
 " 下面两个插件要配合使用，可以自动生成代码块
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -107,6 +109,7 @@ Plug 'iamcco/markdown-preview.vim'
 " 插件结束的位置，插件全部放在此行上面
 call plug#end()
 
+
 "==============================================================================
 " 主题配色 
 "==============================================================================
@@ -116,6 +119,7 @@ set termguicolors
 " 配色方案, 可以从上面插件安装中的选择一个使用 
 colorscheme one " 主题
 set background=dark " 主题背景 dark-深色; light-浅色
+
 
 "==============================================================================
 " vim-go 插件
@@ -135,6 +139,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_generate_tags = 1
 
 let g:godef_split=2
+
 
 "==============================================================================
 " NERDTree 插件
@@ -157,6 +162,7 @@ let NERDTreeShowBookmarks=2
 
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
+
 
 "==============================================================================
 "  majutsushi/tagbar 插件
@@ -193,6 +199,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+
 "==============================================================================
 "  nerdtree-git-plugin 插件
 "==============================================================================
@@ -210,6 +217,23 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 let g:NERDTreeShowIgnoredStatus = 1
+
+
+
+"==============================================================================
+"  Valloric/YouCompleteMe 插件
+"==============================================================================
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<space>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 
 "==============================================================================
 "  其他插件配置
@@ -230,3 +254,35 @@ map <silent> <F6> <Plug>StopMarkdownPreview
 :nn <Leader>8 8gt
 :nn <Leader>9 8gt
 :nn <Leader>0 :tablast<CR>
+
+
+"==============================================================================
+" GVim 的配置
+"==============================================================================
+" 如果不使用 GVim ，可以不用配置下面的配置
+if has('gui_running')
+        colorscheme one
+    " 设置启动时窗口的大小
+    set lines=999 columns=999 linespace=4
+
+    " 设置字体及大小
+        set guifont=Roboto\ Mono\ 13
+
+    set guioptions-=m " 隐藏菜单栏
+    set guioptions-=T " 隐藏工具栏
+    set guioptions-=L " 隐藏左侧滚动条
+    set guioptions-=r " 隐藏右侧滚动条
+    set guioptions-=b " 隐藏底部滚动条
+            " 在 gvim 下不会和 terminal 的 alt+数字的快捷键冲突，
+    " 所以将 tab 切换配置一份 alt+数字的快捷键
+    :nn <M-1> 1gt
+    :nn <M-2> 2gt
+    :nn <M-3> 3gt
+    :nn <M-4> 4gt
+    :nn <M-5> 5gt
+    :nn <M-6> 6gt
+    :nn <M-7> 7gt
+    :nn <M-8> 8gt
+        :nn <M-9> 9gt
+        :nn <M-0> :tablast<CR>
+endif
