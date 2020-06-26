@@ -1,5 +1,11 @@
 vimrc 配置文件参考 `.vimrc`，具体的意思直接看文件中的注释即可。更多更全的内容可以参考[这里](https://raw.githubusercontent.com/BroQiang/vim-go-ide/master/vimrc)。
 
+最终配置好的效果如下图：
+
+![](images/govim.png)
+
+
+
 配置过程：
 
 1、安装 Go 环境：
